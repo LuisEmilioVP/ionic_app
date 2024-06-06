@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'tavla',
+    loadChildren: () => import('./tavla/tavla.module').then( m => m.TavlaPageModule)
+  },
+  {
+    path: 'promedio',
+    loadChildren: () => import('./promedio/promedio.module').then( m => m.PromedioPageModule)
+  },
 ];
 
 @NgModule({

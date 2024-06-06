@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-item>
+      <ion-badge color="success" mode="ios" slot="start">
+        <ion-icon
+          name="clipboard"
+          size="large"
+          style="color: white"
+          routerLink="/home"
+        ></ion-icon>
+      </ion-badge>
+      <ion-label>Examen-1</ion-label>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="container">
+    <ion-icon name="logo-ionic" color="success"></ion-icon>
+    <h1>Ionic App</h1>
   </div>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom, top">
+      <ion-tab-button tab="perfil" routerLink="/perfil">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tabla" routerLink="/tavla">
+        <ion-icon name="apps"></ion-icon>
+        <ion-label>Tabla</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="promedio" routerLink="/promedio">
+        <ion-icon name="stats-chart"></ion-icon>
+        <ion-label>Promedio</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

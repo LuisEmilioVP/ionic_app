@@ -1,0 +1,41 @@
+<!-- Luis Emilio Valenzuela 2022-0675 -->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-item>
+      <ion-badge color="success" mode="ios" slot="start">
+        <ion-icon
+          name="arrow-back"
+          size="large"
+          style="color: white"
+          routerLink="/home"
+        ></ion-icon>
+      </ion-badge>
+      <ion-label>Perfil</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-avatar
+          style="
+            margin: 25px auto;
+            width: 160px;
+            height: 160px;
+            box-shadow: 0 0 10px rgba(254, 254, 254, 0.8);
+          "
+        >
+          <img src="assets/perfil.jpg" />
+
+          <ion-text color="success">
+            <h1>Luis Emilio</h1>
+            <h2>Valenzuela</h2>
+            <p class="ion-margin">2022-0675</p>
+          </ion-text>
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

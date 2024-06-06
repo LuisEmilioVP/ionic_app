@@ -1,0 +1,80 @@
+<!-- Luis Emilio Valenzuela 2022-0675 -->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-item>
+      <ion-badge color="success" mode="ios" slot="start">
+        <ion-icon
+          name="arrow-back"
+          size="large"
+          style="color: white"
+          routerLink="/home"
+        ></ion-icon>
+      </ion-badge>
+      <ion-label>Promedio</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <ion-icon
+      slot="start"
+      name="stats-chart"
+      size="large"
+      color="success"
+      style="display: block; margin: 10px auto"
+    ></ion-icon>
+
+    <ion-title class="ion-text-center ion-margin-top"
+      >Estimación Númerica</ion-title
+    >
+
+    <ion-input
+      [(ngModel)]="numero1"
+      type="number"
+      fill="outline"
+      placeholder="Ingrese el primer número"
+      class="ion-margin-top"
+    ></ion-input>
+
+    <ion-input
+      [(ngModel)]="numero2"
+      type="number"
+      fill="outline"
+      placeholder="Ingrese el segundo número"
+      class="ion-margin-top"
+    ></ion-input>
+
+    <ion-input
+      [(ngModel)]="numero3"
+      type="number"
+      fill="outline"
+      placeholder="Ingrese el tercer número"
+      class="ion-margin-top"
+    ></ion-input>
+
+    <ion-button
+      (click)="calcular()"
+      expand="block"
+      shape="round"
+      color="success"
+      class="ion-margin-top"
+    >
+      Calcular
+    </ion-button>
+
+    <ion-list *ngIf="mayor > 0" class="ion-margin-top">
+      <ion-item>
+        <ion-label>Mayor: {{mayor }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Menor: {{ menor }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Promedio: {{ promedio }} </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

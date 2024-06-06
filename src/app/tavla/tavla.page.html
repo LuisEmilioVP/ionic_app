@@ -1,0 +1,57 @@
+<!-- Luis Emilio Valenzuela 2022-0675 -->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-item>
+      <ion-badge color="success" mode="ios" slot="start">
+        <ion-icon
+          name="arrow-back"
+          size="large"
+          style="color: white"
+          routerLink="/home"
+        ></ion-icon>
+      </ion-badge>
+      <ion-label>Tabla de Multiplicar</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <ion-icon
+      slot="start"
+      name="grid"
+      size="large"
+      color="success"
+      style="display: block; margin: 10px auto"
+    ></ion-icon>
+    <ion-title class="ion-text-center ion-margin-top">Generar Tabla</ion-title>
+
+    <ion-input
+      [(ngModel)]="numero"
+      type="number"
+      fill="outline"
+      placeholder="Ingrese un número"
+      class="ion-margin-top"
+    ></ion-input>
+
+    <ion-button
+      (click)="generTabla()"
+      expand="block"
+      shape="round"
+      color="success"
+      class="ion-margin-top"
+    >
+      Generar
+    </ion-button>
+
+    <br />
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list *ngIf="tabla.length > 0">
+          <ion-item *ngFor="let items of tabla"> {{ items }} </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
